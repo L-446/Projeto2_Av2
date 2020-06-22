@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title> Loja Construção</title>
+  <title> Ambiental Baobá</title>
 
   <?php
     session_start();
@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
     <!-- Toastr -->
     <link rel="stylesheet" href="plugins/toastr/toastr.min.css">
+
+    <!-- Icone da Pagina--> 
+  <link rel="icon" href="dist/img/ecolo.ico">
 
     </head>
     <body class="hold-transition sidebar-mini layout-fixed">
@@ -47,36 +50,49 @@
     <div class="container-fluid">
 
       <?php
-   
-      //$nome  = $_POST['nome'];
-      //$cnpj           = $_POST['cnpj'];
-      //$fone           = $_POST['fone'];
-         
-      //echo $nome. " - ". $cnpj. " - ". $fone;
 
-      if (isset($_SESSION['msg_del'])){
-        $mensagem = $_SESSION['msg_del'];
+      if (isset($_SESSION['msg_cad'])){
+        $msg_cad = $_SESSION['msg_cad'];
         echo "
         <script>
           window.onload = function(){
-            toastr.error('$mensagem')
+            toastr.success('$msg_cad')
+          } 
+        </script>";
+      }
+
+      if (isset($_SESSION['msg_del'])){
+        $mensa_delet = $_SESSION['msg_del'];
+        echo "
+        <script>
+          window.onload = function(){
+            toastr.error('$mensa_delet')
+          } 
+        </script>";
+      }
+
+      if (isset($_SESSION['msg_atual'])){
+        $msg_atual = $_SESSION['msg_atual'];
+        echo "
+        <script>
+          window.onload = function(){
+            toastr.info('$msg_atual')
           } 
         </script>";
       }
       
       session_unset();
-      
       ?>
-  
+
     <h1 class="cover-heading" style="text-align: center;"><b>Empresas Cadastradas</b></h1>
     <div class="callout callout-default">
 
               <!-- /.card-header -->
-              <div class="card">
+          <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Tabela de Empresas</h3>
+                <h3 class="card-title"><b>TABELA DE EMPRESAS</b></h3>
                 
-              <small class="float-right"><a href="add_dist.php" target="_black" ><button type="button" class="btn btn-block bg-gradient-success">Adicionar Empresa</button></small></a>
+              <small class="float-right"><a href="add_dist.php" target="_black" ><button type="button" class="btn btn-block bg-gradient-info"><b>Adicionar Empresa</b></button></small></a>
               </div>
 
               <!-- /.card-header -->
@@ -118,7 +134,7 @@
                     echo '<td>' .$v['cnpj'].  '</td>';
                     echo '<td>'. $v['celular'].  '</td>';
                     echo '<td style="text-align: center;"> 
-                    <a class="btn btn-info btn-sm" href="visual_dist.php? id='.$v['id'].'"><i class="fas fa-folder"></i></a>
+                    <a class="btn btn-success btn-sm" href="visual_dist.php? id='.$v['id'].'"><i class="fas fa-folder"></i></a>
                     <a class="btn btn-primary btn-sm" href="edit_dist.php? id='.$v['id'].'"><i class="fas fa-pencil-alt"></i></a>
                     <a class="btn btn-danger btn-sm" href="delet_dist.php?id='.$v['id'].'" data-href="delet_dist.php?id='.$v['id'].'" data-toggle="modal" data-target="#confirm-delete"><i class="fas fa-trash"></i></a>
                      </td>';
@@ -148,7 +164,6 @@
     include "_includes/footer.php";
 
     ?>
-
 
           <div class="modal fade" id="confirm-delete">
             <div class="modal-dialog">
@@ -180,22 +195,13 @@
   <script src="plugins/toastr/toastr.min.js"></script>
 
   <script>
-    $(function () {
-      $("#example1").DataTable({
-        "responsive": true,
-        "autoWidth": false,
-      });
-    });
-  </script>
-
-
-  <script>
 
   $('#confirm-delete').on('show.bs.modal', function(e) {
       $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
   });
 
   </script>
+
 
 </body>
 </html>

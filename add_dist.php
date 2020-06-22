@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title> Loja Construção</title>
+  <title> Ambiental Baobá</title>
  
   <!-- Icone da Pagina--> 
-  <link rel="icon" href="dist/img/php.ico">
+  <link rel="icon" href="dist/img/ecolo.ico">
 
   <?php
     
@@ -29,7 +29,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Adicionar Empresas</h1>
+            <h1 class="m-0 text-dark"><b>Adicionar Empresas</b></h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -44,9 +44,9 @@
     <section class="content">
       <div class="container-fluid">
    
-      <div class="card card-primary">
+      <div class="card card-success">
          <div class="card-header">
-           <h3 class="card-title">Cadastrar Empresas</h3>
+           <h3 class="card-title"><b>Cadastrar Empresas</b></h3>
             </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -111,7 +111,7 @@
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Cadastrar</button>
+                  <button type="submit" class="btn btn-success"><b>Cadastrar</b></button>
                 </div>
               </form>
             </div>
@@ -127,6 +127,7 @@
     include "_includes/footer.php";
 
     ?>
+    
 
 
 

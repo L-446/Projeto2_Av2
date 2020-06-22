@@ -1,7 +1,4 @@
-<?php //APRESENTAR DIRETO EM TABELA
-
-  //echo "<table style='border: solid 1px black;'>";
-  //echo "<tr><th>Id</th><th>Firstname</th><th>Lastname</th></tr>";
+<?php
 
   include "conexao.php";
   $conn = connection();
@@ -44,10 +41,10 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title> Loja Construção</title>
+  <title> Ambiental Baobá</title>
  
   <!-- Icone da Pagina--> 
-  <link rel="icon" href="dist/img/php.ico">
+  <link rel="icon" href="dist/img/ecolo.ico">
 
   <?php
     
@@ -75,7 +72,7 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item active"><a href="index_dist.php">Empresa</li></a> 
-              <li class="breadcrumb-item active">Loja de Construção</li>
+              <li class="breadcrumb-item active">Ambiental Baobá</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -85,7 +82,7 @@
     <section class="content">
       <div class="container-fluid">
    
-      <div class="card card-info">
+      <div class="card card-success">
          <div class="card-header" style="text-align: center;">
            <h4><i class="fas fa-globe"></i> Dados da Empresa</h4>
             </div>
@@ -110,8 +107,7 @@
                 </div>
               </div>
               <!-- /.row -->
-
-          
+ 
             </div>
             </div>
             <!-- /.card -->
@@ -126,8 +122,6 @@
     include "_includes/footer.php";
 
     ?>
-
-
 
 </body>
 </html>

@@ -18,17 +18,18 @@
     //ESTE FOREACH É RESPONSAVEL POR COLOCAR OS DADOS EM CADA LINHA DA TABELA - LISTA OS DADOS NO BANCO
     foreach($stmt->fetchAll() as $k=>$v) {
 
-      @$nome                   =  $_POST['nome'];
-      @$cnpj                   =  $_POST['cnpj'];
-      @$inscricao_estadual     =  $_POST['inscricao_estadual'];
-      @$email                  =  $_POST['email'];
-      @$cep                    =  $_POST['cep'];
-      @$endereco               =  $_POST['endereco'];
-      @$numero                 =  $_POST['numero'];
-      @$bairro                 =  $_POST['bairro'];
-      @$cidade                 =  $_POST['cidade'];
-      @$uf                     =  $_POST['uf'];
-      @$celular                =  $_POST['celular'];
+      $id                     = $v['id'];
+      $nome                   = $v['nome'];
+      $cnpj                   = $v['cnpj'];
+      $inscricao_estadual     = $v['inscricao_estadual'];
+      $email                  = $v['email'];
+      $cep                    = $v['cep'];
+      $endereco               = $v['endereco'];
+      $numero                 = $v['numero'];
+      $bairro                 = $v['bairro'];
+      $cidade                 = $v['cidade'];
+      $uf                     = $v['uf'];
+      $celular                = $v['celular'];
 
     }
   } catch(PDOException $e) {
@@ -43,10 +44,10 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title> Loja Construção</title>
+  <title> Ambiental Baobá</title>
  
   <!-- Icone da Pagina--> 
-  <link rel="icon" href="dist/img/php.ico">
+  <link rel="icon" href="dist/img/ecolo.ico">
 
   <?php
     
@@ -69,7 +70,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Atualização de Empresa</h1>
+            <h1 class="m-0 text-dark"><b>Atualização de Empresa</b></h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -83,10 +84,11 @@
     <!-- /.content-header -->
     <section class="content">
       <div class="container-fluid">
+        
    
-      <div class="card card-primary">
+      <div class="card card-success">
          <div class="card-header">
-           <h3 class="card-title">Atualizar Empresa</h3>
+           <h3 class="card-title"><b>Atualizar Empresa</b></h3>
             </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -102,9 +104,41 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">CNPJ</label>
-                    <input type="text" class="form-control" id="cnpj" name= "cnpj" value="<?php echo $cnpj;?>"" required>
+                    <input type="text" class="form-control" id="cnpj" name= "cnpj" value="<?php echo $cnpj;?>" required>
                   </div>
-                  
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Inscrição Estadual</label>
+                    <input type="text" class="form-control" id="inscricao_estadual" name= "inscricao_estadual" value="<?php echo $inscricao_estadual;?>" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">E-mail</label>
+                    <input type="text" class="form-control" id="email" name= "email" value="<?php echo $email;?>" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">CEP</label>
+                    <input type="text" class="form-control" id="cep" name= "cep" value="<?php echo $cep;?>" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Endereço</label>
+                    <input type="text" class="form-control" id="endereco" name= "endereco" value="<?php echo $endereco;?>" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">N°</label>
+                    <input type="text" class="form-control" id="numero" name= "numero" value="<?php echo $numero;?>" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Bairro</label>
+                    <input type="text" class="form-control" id="bairro" name= "bairro" value="<?php echo $bairro;?>" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Cidade</label>
+                    <input type="text" class="form-control" id="cidade" name= "cidade" value="<?php echo $cidade;?>" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">UF</label>
+                    <input type="text" class="form-control" id="uf" name= "uf" value="<?php echo $uf;?>" required>
+                  </div>
+
                   <!-- phone mask -->
                 <div class="form-group">
                   <label>Fone</label>
@@ -123,7 +157,7 @@
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Atualizar</button>
+                  <button type="submit" class="btn btn-success"><b>Atualizar</b></button>
                 </div>
               </form>
             </div>

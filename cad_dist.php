@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include "conexao.php";
 $conn = connection();
 //Vai substituir --> $conn = new PDO...
@@ -37,10 +37,10 @@ try {
   @$celular                =  $_POST['celular'];
   $stmt->execute();
 
-  echo "Empresa cadastrada com Sucesso!!!";
-} catch(PDOException $e) {
-  echo "Error: " . $e->getMessage();
-}
+  $_SESSION['msg_cad'] = "Empresa cadastrada com sucesso!";
+    } catch(PDOException $e) {
+        $_SESSION['msg_cad'] = "Error: " . $e->getMessage();
+    }
 $conn = null;
 
 header('Location: index_dist.php');

@@ -26,22 +26,4 @@
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 
- <!-- Navbar -->
- <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="index.php" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contatos</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown01">
-                <img src="dist/img/insta.png" style="width:18px"  id="insta"><a target="_blank" href="https://www.instagram.com/lleticia_13/?hl=pt-br">@lleticia_13</a></br>
-                  <img src="dist/img/whats.png" style="width:18px"  id="Whats"><a target="_blank" href="https://wa.me/5588997783470?text=Olá%20Leticia">@Letícia</a></br>
-              </div>
-            </li>
-    </ul>
- </nav>
+
