@@ -3,9 +3,9 @@
     //CONEXÃO BANCO DE DADOS
     function connection(){
         $servername = "sql212.epizy.com";
-        $username   = "epiz_26080679";
-        $password   = "5KOIMWAIL4O";
-        $database   = "epiz_26080679_sust_empresa";
+        $username   = "epiz_26080696";
+        $password   = "Am1RhlXqNMEH2oc";
+        $database   = "epiz_26080696_sust_empresa";
 
         try { //TRATAMENTO DE EXCESSÕES - POSSIVEIS ERROS
         $conn = new PDO("mysql:host=$servername;dbname=$database; charset=utf8", $username, $password);
