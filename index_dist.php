@@ -109,25 +109,18 @@
                   </thead>
                   <tbody>
                  
-            <?php //APRESENTAR DIRETO EM TABELA
-
-                //echo "<table style='border: solid 1px black;'>";
-                //echo "<tr><th>Id</th><th>Firstname</th><th>Lastname</th></tr>";
+            <?php 
 
                 include "conexao.php";
                 $conn = connection();
 
                 try {
-                  //$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
                   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                   $stmt = $conn->prepare("SELECT * FROM empresas");
                   $stmt->execute();
 
-                  //ESTE FOREACH É RESPONSAVEL POR COLOCAR OS DADOS EM CADA LINHA DA TABELA - LISTA OS DADOS NO BANCO
                   $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
                   foreach($stmt->fetchAll() as $k=>$v) {
-                    //var_dump($v);
-                    //echo $v;
                     echo '<tr>';
                     echo '<td>'.$v['id'].  '</td>';
                     echo '<td>'.$v['nome']. '</td>';
